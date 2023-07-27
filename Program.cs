@@ -65,7 +65,7 @@ namespace MinimalUserApi
                 return Results.Ok("Update Done");
 
             });
-            app.MapPost("/customerr/DeleteCustomer/{id}", async (ICustomerService service, int id) =>
+            app.MapPost("/customer/DeleteCustomer/{id}", async (ICustomerService service, int id) =>
             {
                 var result = await service.GetCustomer(id);
                 if (result == null)return Results.BadRequest("Customer not found");
